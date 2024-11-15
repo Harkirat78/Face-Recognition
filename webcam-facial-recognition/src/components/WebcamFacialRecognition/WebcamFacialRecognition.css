@@ -1,0 +1,123 @@
+/* General Container */
+.webcam-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #1a1a1a, #333333);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  color: #f0f0f0;
+  text-align: center;
+}
+
+/* Controls Styling */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.control-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #4CAF50;
+  color: white;
+}
+
+.control-button.stop {
+  background: #f44336;
+}
+
+.control-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.control-button:hover:not(.disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-feed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Canvas Overlay */
+.detection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Info Tabs */
+.info-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.info-tab {
+  flex: 1;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  background: #282828;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.info-tab:hover {
+  transform: scale(1.05);
+}
+
+.info-content {
+  display: none;
+  padding: 1rem;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.info-content.active {
+  display: block;
+}
+
+/* Error and Loading Messages */
+.error-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #ff5252;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.loading {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #2196F3;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+}
